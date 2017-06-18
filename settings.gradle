@@ -1,0 +1,3 @@
+include ':SlidingMenu', ':actionbarsherlock'
+include ':WheelView'
+include ':VLC'

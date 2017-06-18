@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    //useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "org.videolan.vlc"
+        minSdkVersion 18
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':SlidingMenu')
+    compile project(':WheelView')
+    compile project(':actionbarsherlock')
+//    compile 'com.android.support:support-v4:22.2.0'
+    compile 'org.apache.httpcomponents:httpcore:4.4.5'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+}
